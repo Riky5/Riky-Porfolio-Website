@@ -10,7 +10,7 @@ const Layout = ({ pageTitle, children }) => {
       <nav className="navbar is-light has-shadow" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <div class="navbar-item">
-            <Link to="/">
+            <Link to="/">Home
               {/* add my own img logo */}
               {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt='logo'/> */}
             </Link>
@@ -19,7 +19,14 @@ const Layout = ({ pageTitle, children }) => {
         <div className='navbar-end'>
           <div className='navbar-item'><Link to="/about">About</Link></div>
           <div className='navbar-item'><Link to="/projects">Projects</Link></div>
-          <div className='navbar-item'><Link to="/contacts">Contacts</Link></div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <Link to="" className="navbar-item">Contacts</Link>
+            <div className="navbar-dropdown">
+              <Link to="" className="navbar-item">LinkedIn</Link>
+              <Link to="" className="navbar-item">Gmail</Link>
+              <Link to="" className="navbar-item">Codepen</Link>
+            </div>
+          </div>
         </div>
       </nav>
       <main>
