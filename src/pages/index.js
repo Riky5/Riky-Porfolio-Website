@@ -1,7 +1,8 @@
 import * as React from "react"
+// import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import { homepage, homepageText } from '../components/layout.module.css'
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 // markup
 const IndexPage = () => {
@@ -10,12 +11,12 @@ const IndexPage = () => {
         <div className={homepage}>
           <h1 className={homepageText}>Junior Software Developer</h1>
         </div>
-        <StaticImage
+        {/* <StaticImage
         alt='my drawing of a dog called Bernie'
         src='../images/bernie.jpg'
         height='700'
         >
-        </StaticImage>
+        </StaticImage> */}
       </Layout>
   )
 }
