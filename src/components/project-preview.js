@@ -1,22 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { projectPreview } from './layout.module.css'
 
-const ProjectPreview = ({ slug, imageData, url, name, description }) => {
+const ProjectPreview = ({ id, imageData, name, description }) => {
   return (
-    <div className="project-preview">
-    <Link to={`/${slug}/`}>
-      {/* <StaticImage src={imageData} alt={name} /> */}
-    </Link>
+    <div key={id} className={projectPreview}>
     <h2>
-      <Link to={`/projects/${slug}/`}>{name}</Link>
+      <Link to={`/projects/${name}/`}>{name}</Link>
     </h2>
-    <p>{description}</p>
+    <Link to={`/projects/${name}/`}>
+      <GatsbyImage image={imageData} alt={name} />
+    </Link>
+    <p key={id}>{description}</p>
     <p>
-      <Link to={`/projects/${slug}/`}>View this project &rarr;</Link>
+      <Link to={`/projects/${name}/`}>View this project &rarr;</Link>
     </p>
   </div>
   ) 
 }
 
-export default ProjectPreview
+export default ProjectPreview;

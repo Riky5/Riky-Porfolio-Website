@@ -8,8 +8,8 @@ const Layout = ({ pageTitle, children }) => {
     <div className={body}>
       <title>{pageTitle}</title>
       <nav className="navbar is-fixed-top is-transparent p-5" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <div class="navbar-item">
+        <div className="navbar-brand">
+          <div className="navbar-item">
             <Link to="/">Home
               {/* add my own img logo
               <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt='logo'/> */}
@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
         <div className='navbar-end'>
           <div className='navbar-item'><Link to="/about">About</Link></div>
           <div className='navbar-item'><Link to="/projects">Projects</Link></div>
-          <div class="navbar-item has-dropdown is-hoverable">
+          <div className="navbar-item has-dropdown is-hoverable">
             <div className="navbar-item"><Link to="">Contacts</Link></div>
             <div className="navbar-dropdown">
               <Link to="" className="navbar-item">LinkedIn</Link>

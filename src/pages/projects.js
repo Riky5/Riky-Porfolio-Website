@@ -3,12 +3,13 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
 import ProjectPreview from '../components/project-preview'
 
-export default () => {
+const ProjectsPage = () => {
     const data = useStaticQuery(graphql`
       {
         allSanityProject {
           edges {
             node {
+              _id,
               name,
               description,
               githubURL,
@@ -28,17 +29,17 @@ export default () => {
     <Layout pageTitle="Projects">
       <h1>Projects</h1>
       {projects.map(({ node: project }) => {
+        const id = project._id
         const name = project.name;
         const description = project.description;
-        const slug = project.slug;
         const url = project.githubURL;
         const imageData = project.imagePreview.asset.gatsbyImageData;
 
         return (
           <ProjectPreview
+            id={id}
             name={name}
             description={description}
-            slug={slug}
             url={url}
             imageData={imageData}
           />
@@ -47,3 +48,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default ProjectsPage;
