@@ -5,18 +5,18 @@ import { projectPreview } from './layout.module.css'
 
 const ProjectPreview = ({ id, imageData, name, description }) => {
   return (
-    <div key={id} className={projectPreview}>
-    <h2>
-      <Link to={`/projects/${name}/`}>{name}</Link>
-    </h2>
-    <Link to={`/projects/${name}/`}>
-      <GatsbyImage image={imageData} alt={name} />
-    </Link>
-    <p key={id}>{description}</p>
-    <p>
-      <Link to={`/projects/${name}/`}>View this project &rarr;</Link>
-    </p>
-  </div>
+    <div className={projectPreview}>
+      <h2>
+        <Link to={`/projects/${name}/`}>{name}</Link>
+      </h2>
+      <Link to={`/projects/${name}/`}>
+        <GatsbyImage image={imageData} alt={name} />
+      </Link>
+      <p>{description}</p>
+      <p>
+        <Link to={`/projects/${name}/`}>View this project &rarr;</Link>
+      </p>
+    </div>
   ) 
 }
 
