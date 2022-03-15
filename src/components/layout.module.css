@@ -216,6 +216,18 @@ select {
   transform: scale(1.3);
 }
 
-nav > * {
+/* navbar underline */
+
+nav > div > * {
   text-transform: uppercase;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0);
+}
+
+nav > div > *:hover,
+.underline > *:focus {
+  border-bottom: .2rem solid hsl( var(--clr-white) / .5);
+}
+
+nav > div > *.active {
+  border-bottom: .2rem solid hsl( var(--clr-white) / 1);
 }

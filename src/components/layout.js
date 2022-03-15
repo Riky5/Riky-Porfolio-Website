@@ -11,7 +11,7 @@ const Layout = ({ pageTitle, children }) => {
     <div className={body}>
       <title>{pageTitle}</title>
       <nav className='navbar is-black is-fixed-top pl-5 pr-5' role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
+        <div className='navbar-brand'>
           <div className="navbar-item">
             <Link to="/" activeStyle={{ color: "white" }}>Home
               {/* add my own img logo
