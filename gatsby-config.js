@@ -13,6 +13,7 @@ module.exports = {
       options: {
         projectId: 'udhmime6',
         dataset: 'production',
+        watchMode: true,
       },
     }
   ]

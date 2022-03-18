@@ -5,26 +5,26 @@ import ProjectPreview from '../components/project-preview'
 import { projectsGridContainer } from '../components/layout.module.css'
 
 const ProjectsPage = () => {
-    const data = useStaticQuery(graphql`
-      {
-        allSanityProject {
-          edges {
-            node {
-              _id,
-              name,
-              description,
-              githubURL,
-              imagePreview {
-                asset {
-                  gatsbyImageData
-                }
+  const data = useStaticQuery(graphql`
+    {
+      allSanityProject {
+        edges {
+          node {
+            _id,
+            name,
+            description,
+            githubURL,
+            imagePreview {
+              asset {
+                gatsbyImageData
               }
             }
           }
         }
       }
-    `);
-    const projects = data.allSanityProject.edges;
+    }
+  `);
+  const projects = data.allSanityProject.edges;
 
   return (
     <Layout pageTitle="Projects">

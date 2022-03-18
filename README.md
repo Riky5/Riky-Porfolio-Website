@@ -7,4 +7,4 @@
   My eCV
 </h1>
 
-Built with Gatsbyjs
+Built with Gatsbyjs, Bulma, CSS, graphQL, and Sanity.io.
