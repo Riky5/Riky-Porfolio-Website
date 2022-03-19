@@ -26,7 +26,7 @@ const ProjectTemplate = ({ data }) => {
   const url = project.githubURL;
 
   return (
-    <Layout>
+    <Layout pageTitle="Project">
       <Project
         name={name}
         description={description}

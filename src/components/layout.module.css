@@ -174,24 +174,79 @@ nav div div a {
   color: hsl( var(--clr-white) / 1);
 }
 
+.faIcons {
+  /* background-color: blue; */
+  color: white; 
+  margin-right: .5em;
+  padding: .5em;
+  border-radius: 5px;
+}
+
+
 /* homepage */
 
 .homepage {
   display: flex;
   justify-content: center;
-  font-size: 6.8rem;
   width: 100vw;
   height: 100vh;
-  border-radius: 30px;
-  padding: 20rem;
+  padding-inline: 5em;
 }
 
-.homepageText {
-  align-self: center;
-  padding: 0;
+.homepage > h1 {
+  font-size: var(--fs-900);
+  text-align: right;
+  margin-top: 1.6em;
+  padding-left: 0;
+  padding-right: 1em;
+}
+
+.homepage > h2 {
+  font-size: var(--fs-600);
+  text-align: right;
+  margin-top: 7.4em;
+  max-width: 6em;
+  width: 100%;
+}
+
+/* about */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding-inline: 5em;
+}
+
+.about h1 {
+  background-color: aqua;
+  font-size: var(--fs-700);
+  margin-top: 1em;
+}
+
+.about p:where(:first-child) {
+  font-size: var(--fs-600);
+  margin-left: 8em;
+  font-weight: bold;
+  margin-bottom: .8em;
+  text-align: justify;
+}
+
+.about p:where(:not(:first-child)) {
+  font-size: var(--fs-400);
+  margin-left: 21em;
+  margin-bottom: .5em;
+  text-align: justify;
 }
 
 /* project preview page */
+
+.title {
+  font-size: var(--fs-700);
+  text-align: center;
+  margin: 1em;
+}
 
 .projectsGridContainer {
   display: grid;
@@ -216,13 +271,18 @@ nav div div a {
   color: hsl( var(--clr-white) / 1);
 }
 
-.projectPreview *:where(:not(:last-child)) {
+.projectPreview *:where(:not(:nth-child(-n + 2))) {
   margin-bottom: 1.2rem;
 }
 
 .projectPreview h2 {
   font-size: var(--fs-600);
   font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.projectPreview > a > * {
+  margin-bottom: 1em;
 }
 
 .projectPreview h2 > a:hover,

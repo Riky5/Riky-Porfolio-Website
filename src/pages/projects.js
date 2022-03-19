@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
 import ProjectPreview from '../components/project-preview'
-import { projectsGridContainer } from '../components/layout.module.css'
+import { title, projectsGridContainer } from '../components/layout.module.css'
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
@@ -28,13 +28,13 @@ const ProjectsPage = () => {
 
   return (
     <Layout pageTitle="Projects">
-      <h1>Projects</h1>
+      <h1 className={title}>Projects</h1>
       <div className={projectsGridContainer}>
         {projects.map(({ node: project }) => {
           const id = project._id
           const name = project.name;
           const description = project.description;
-          const url = project.githubURL;
+          // const url = project.githubURL;
           const imageData = project.imagePreview.asset.gatsbyImageData;
 
           return (
@@ -42,7 +42,6 @@ const ProjectsPage = () => {
               id={id}
               name={name}
               description={description}
-              url={url}
               imageData={imageData}
             />
           )

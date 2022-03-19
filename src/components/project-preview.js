@@ -5,7 +5,7 @@ import { projectPreview } from './layout.module.css'
 
 const ProjectPreview = ({ imageData, name, description }) => {
   return (
-    <div className={projectPreview}>
+    <div className={projectPreview} data-scroll data-scroll-speed="1">
       <h2>
         <Link to={`/projects/${name}/`}>{name}</Link>
       </h2>

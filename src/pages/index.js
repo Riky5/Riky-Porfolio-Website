@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import { homepage, homepageText, bigButton } from '../components/layout.module.css'
+import { homepage, bigButton } from '../components/layout.module.css'
 // import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
@@ -10,6 +10,7 @@ const IndexPage = () => {
       allSanityPerson {
         edges {
           node {
+            _id
             name
             role
           }
@@ -18,13 +19,22 @@ const IndexPage = () => {
     }
   `);
 
-  // const person = data.allSanityPerson.edges;
+  const person = data.allSanityPerson.edges;
 
   return (
       <Layout pageTitle='My Portfolio'>
-        <div className={homepage}>
-          <h1 className={homepageText}>Junior Software Developer</h1>
-        </div>
+        {person.map(({node: person}) => {
+          const id = person._id;
+          const name = person.name;
+          const role = person.role;
+
+            return (
+              <div key={id} className={homepage} data-scroll-section>
+                <h2>{name}</h2>
+                <h1 data-scroll data-scroll-speed="2">{role}</h1>
+              </div>
+            )
+          })}
         <button href='#' className={bigButton}>Explore</button>
         {/* <StaticImage
         alt='my drawing of a dog called Bernie'
