@@ -8,7 +8,7 @@ const TechList = ({ techs }) => {
       <div>
         {techs.map((tech) => {
           return (
-            <ul>
+            <ul key={tech._key}>
               <li>{tech.name}</li>
             </ul>
           )

@@ -15,9 +15,11 @@ const AboutPage = () => {
             name
             about
             tech {
+              _key
               name
             }
             educationAndGurus {
+              _key
               name
             }
           }
@@ -36,16 +38,19 @@ const AboutPage = () => {
         const name = info.name;
         const paragraphs = info.about;
         const techs = info.tech;
+        const eduAndGurus = info.educationAndGurus;
         return (
           <div key={id}>
-            <Profile 
+            <Profile
               name = {name}
               paragraphs = {paragraphs}
             />
             <TechList
               techs = {techs}
             />
-            <Education />
+            <Education
+              eduAndGurus = {eduAndGurus}
+            />
           </div>
         );
       })}

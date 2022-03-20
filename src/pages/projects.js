@@ -38,12 +38,14 @@ const ProjectsPage = () => {
           const imageData = project.imagePreview.asset.gatsbyImageData;
 
           return (
-            <ProjectPreview
-              id={id}
-              name={name}
-              description={description}
-              imageData={imageData}
-            />
+            <div key={id} className={projectsGridContainer}>
+              <ProjectPreview
+                id={id}
+                name={name}
+                description={description}
+                imageData={imageData}
+              />
+            </div>
           )
         })}
       </div>
