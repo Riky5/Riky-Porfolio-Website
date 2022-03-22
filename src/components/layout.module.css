@@ -209,9 +209,16 @@ nav div div a {
   width: 100%;
 }
 
-/* about */
+/* ABOUT */
 
-.about {
+.aboutSection h1, .techSection h1, .eduSection h1 {
+  font-size: var(--fs-700);
+  margin-top: 1em;
+}
+
+/* profile section */
+
+.aboutSection {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -219,25 +226,54 @@ nav div div a {
   padding-inline: 5em;
 }
 
-.about h1 {
-  background-color: aqua;
-  font-size: var(--fs-700);
-  margin-top: 1em;
-}
-
-.about p:where(:first-child) {
+.aboutSection p:where(:first-child) {
   font-size: var(--fs-600);
-  margin-left: 8em;
+  margin-left: 10em;
   font-weight: bold;
   margin-bottom: .8em;
   text-align: justify;
 }
 
-.about p:where(:not(:first-child)) {
+.aboutSection p:where(:not(:first-child)) {
   font-size: var(--fs-400);
   margin-left: 21em;
   margin-bottom: .5em;
   text-align: justify;
+}
+
+/* techs section */
+
+.techSection, .eduSection {
+  width: 100vw;
+  height: 100vh;
+  padding-inline: 5em;
+}
+
+.techSection > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: var(--gap, 2em);
+  margin-left: 16em;
+  padding: 1em;
+  border: 1px solid red;
+}
+
+.techSection div p {
+  font-size: var(--fs-500);
+}
+
+/* Edu & Gurus section */
+
+.eduSection div h2 {
+  font-size: var(--fs-500);
+}
+
+.eduSection > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16em;
+  padding: 1em;
+  border: 1px solid red;
 }
 
 /* project preview page */
@@ -251,8 +287,8 @@ nav div div a {
 .projectsGridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: var(--gap, 2rem);
-  max-width: 80rem;
+  gap: var(--gap, 2.5rem);
+  max-width: 82rem;
   margin-inline: auto;
   padding-bottom: 2rem;
 }
@@ -267,7 +303,7 @@ nav div div a {
 }
 
 /* all links in projectPreview */
-.projectPreview * {
+.projectPreview *, .projectSection > a {
   color: hsl( var(--clr-white) / 1);
 }
 
@@ -285,6 +321,11 @@ nav div div a {
   margin-bottom: 1em;
 }
 
+.thumbnail {
+  border-radius: 20px;
+  max-height: 16em;
+}
+
 .projectPreview h2 > a:hover,
 .projectPreview h2 > a:focus {
   color: hsl( var(--clr-dark) );
@@ -294,9 +335,34 @@ nav div div a {
 }
 
 .projectPreview > p a:hover,
-.projectPreview > p a:focus {
+.projectSection > a > p span:hover,
+.projectPreview > p a:focus,
+.projectSection > a > p span:focus {
   color:hsl( var(--clr-light) );
-  border-bottom: 1px solid hsl( var(--clr-white) );
+  border-bottom: 2px solid hsl( var(--clr-white) );
+}
+
+/* single project page */
+
+.projectSection {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding-inline: 5em;
+}
+
+.projectSection > div > p {
+  text-align: center;
+  align-self: center;
+  margin-left: 1.5em;
+  font-size: var(--fs-500);
+}
+
+.projectImage {
+  border-radius: 20px;
+  padding: 2em;
+  max-width: 55rem;
 }
 
 /* button round style */

@@ -34,11 +34,10 @@ const ProjectsPage = () => {
           const id = project._id
           const name = project.name;
           const description = project.description;
-          // const url = project.githubURL;
           const imageData = project.imagePreview.asset.gatsbyImageData;
 
           return (
-            <div key={id} className={projectsGridContainer}>
+            <div key={id}>
               <ProjectPreview
                 id={id}
                 name={name}

@@ -1,16 +1,16 @@
 import React from 'react'
-import { about } from '../components/layout.module.css'
+import { techSection } from '../components/layout.module.css'
 
 const TechList = ({ techs }) => {
   return (
-    <section className={about}>
+    <section className={techSection}>
       <h1 data-scroll data-scroll-speed="1">Techs</h1>
       <div>
         {techs.map((tech) => {
           return (
-            <ul key={tech._key}>
-              <li>{tech.name}</li>
-            </ul>
+            <div key={tech._key}>
+              <p>{tech.name}</p>
+            </div>
           )
         })}
       </div>

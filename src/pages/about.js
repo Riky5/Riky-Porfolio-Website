@@ -21,6 +21,12 @@ const AboutPage = () => {
             educationAndGurus {
               _key
               name
+              description
+              iconLogo {
+						    asset {
+							    gatsbyImageData
+                }
+              }
             }
           }
         }
@@ -28,7 +34,7 @@ const AboutPage = () => {
     }
   `);
 
-    const info = data.allSanityPerson.edges;
+  const info = data.allSanityPerson.edges;
 
   return (
     <Layout pageTitle="About">

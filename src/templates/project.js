@@ -14,6 +14,10 @@ query ($name: String!) {
         gatsbyImageData
       }
     }
+    techUsed {
+      _key
+			name
+    }
   }
 }
 `;
@@ -24,6 +28,7 @@ const ProjectTemplate = ({ data }) => {
   const description = project.description;
   const imageData = project.imagePreview.asset.gatsbyImageData;
   const url = project.githubURL;
+  const techUsed = project.techUsed;
 
   return (
     <Layout pageTitle="Project">
@@ -32,6 +37,7 @@ const ProjectTemplate = ({ data }) => {
         description={description}
         imageData={imageData}
         url={url}
+        techUsed={techUsed}
       />
     </Layout>
   )
