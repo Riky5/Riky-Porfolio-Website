@@ -2,7 +2,6 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import { homepage, bigButton } from '../components/layout.module.css'
-// import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -36,12 +35,6 @@ const IndexPage = () => {
             )
           })}
         <button href='#' className={bigButton}>Explore</button>
-        {/* <StaticImage
-        alt='my drawing of a dog called Bernie'
-        src='../images/bernie.jpg'
-        height='700'
-        >
-        </StaticImage> */}
       </Layout>
   )
 }
