@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import 'bulma/css/bulma.min.css'
 import { faLinkedinIn, faCodepen } from '@fortawesome/free-brands-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { faIcons } from './layout.module.css'
@@ -12,8 +11,6 @@ const Navbar = () => {
         <div className='navbar-brand'>
           <div className="navbar-item">
             <Link to="/" activeStyle={{ borderBottom: "1px solid white" }}>Home
-              {/* add my own img logo
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt='logo'/> */}
             </Link>
           </div>
         </div>

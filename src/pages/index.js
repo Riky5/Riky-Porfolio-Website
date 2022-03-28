@@ -29,12 +29,14 @@ const IndexPage = () => {
 
             return (
               <div key={id} className={homepage} data-scroll-section>
-                <h2>{name}</h2>
+                <div>
+                  <h4>{name}</h4>
+                  <button className={bigButton}><a href='https://github.com/Riky5'>Github</a></button>
+                </div>
                 <h1 data-scroll data-scroll-speed="2">{role}</h1>
               </div>
             )
           })}
-        <button href='#' className={bigButton}>Explore</button>
       </Layout>
   )
 }
