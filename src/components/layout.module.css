@@ -264,6 +264,12 @@ nav div div a {
 
 /* Edu & Gurus section */
 
+.eduSection > h1, .techSection > h1 {
+  max-width: 4.6em;
+  width: 100%;
+  text-align: right;
+}
+
 .eduSection div h2 {
   font-size: var(--fs-500);
 }
