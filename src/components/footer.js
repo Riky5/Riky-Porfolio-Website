@@ -19,13 +19,13 @@ const Footer = () => {
             </a>
 
             <div className="navbar-dropdown">
-              <a href="/" class="navbar-item">
-                Gatsby
+              <a href="https://www.gatsbyjs.com/" className="navbar-item">
+                Gatsbyjs
               </a>
-              <a href="/" className="navbar-item">
+              <a href="https://graphql.org/" className="navbar-item">
                 GraphQL
               </a>
-              <a href="/" className="navbar-item">
+              <a href="https://www.sanity.io/" className="navbar-item">
                 Sanity.io
               </a>
             </div>

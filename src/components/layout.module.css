@@ -432,16 +432,13 @@ main {
   border-top: 1px solid hsl( var(--clr-white) );
 }
 
-.footer > div {
+.topSection {
   display: flex;
   justify-content: space-between;
-}
-
-.footer div, .footer > div > div > a {
-  color: hsl( var(--clr-white) );
-}
-
-.topSection {
   width: 100vw;
   height: 5em;
+}
+
+.footer div, .footer > div > div > div > a {
+  color: hsl( var(--clr-white) );
 }
