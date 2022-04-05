@@ -77,6 +77,8 @@ p {
 
 /* set up body */
 .body {
+  display: flex;
+  flex-direction: column;
   font-size: var(--fs-400);
   color: hsl( var(--clr-white) );
   background-color: hsl( var(--clr-dark) );
@@ -174,6 +176,10 @@ nav div div a {
   margin-right: .5em;
   padding: .5em;
   border-radius: 5px;
+}
+
+main {
+  flex: 1;
 }
 
 /* homepage */
@@ -412,4 +418,30 @@ nav div div a {
 .bigButton:focus::after {
   opacity: 1;
   transform: scale(1.4);
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  background-color: #0a0a0a;
+  flex-direction: column;
+  height: 30vh;
+  width: 100vw;
+  padding-inline: 3em;
+  border-top: 1px solid hsl( var(--clr-white) );
+}
+
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer div, .footer > div > div > a {
+  color: hsl( var(--clr-white) );
+}
+
+.topSection {
+  width: 100vw;
+  height: 5em;
 }

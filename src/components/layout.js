@@ -8,11 +8,11 @@ import "./locomotiveScroll.css"
 
 const Layout = ({ pageTitle, children, location }) => {
   return (
-    <div className={body}>
+    <div className={body} data-scroll-section>
       <title>{pageTitle}</title>
       <Scroll callbacks={location} />
       <Navbar />
-      <main data-scroll-section>
+      <main>
         {children}
       </main>
       <Footer />
